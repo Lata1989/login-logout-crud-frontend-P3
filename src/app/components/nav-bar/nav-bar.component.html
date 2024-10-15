@@ -1,0 +1,19 @@
+<!-- <p>nav-bar works!</p> -->
+<!-- <nav>
+    <ul>
+        <li><a routerLink="/">Inicio</a></li>
+        <li><a routerLink="/clients">Clientes</a></li>
+        <li><app-logout-button></app-logout-button></li>
+    </ul>
+</nav> -->
+
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink='clients'>Clientes</button>
+    <button mat-menu-item routerLink='clients/create'>Agregar</button>
+    <button mat-menu-item routerLink='clients/edit'>Editar</button>
+    <app-logout-button></app-logout-button>
+</mat-menu>
+
+<!-- Aquí es donde las rutas definidas cargarán sus componentes -->
+<router-outlet></router-outlet>

@@ -11,13 +11,15 @@ export const routes: Routes = [
     { path: '', component: ClientsComponent, canActivate: [AuthGuard] },
     
     // Ruta para listar clientes
-    { path: 'clients', component: ClientsComponent, canActivate: [AuthGuard] },
+    // { path: 'clients', component: ClientsComponent, canActivate: [AuthGuard] },
+    { path: 'clients', component: ClientsComponent},
     
     // Ruta para crear un cliente
-    { path: 'clients/create', component: ClientCreateComponent, canActivate: [AuthGuard] },
+    // { path: 'clients/create', component: ClientCreateComponent, canActivate: [AuthGuard] },
+    { path: 'clients/create', component: ClientCreateComponent },
     
     // Ruta para editar un cliente
-    { path: 'clients/:id/edit', component: ClientEditComponent, canActivate: [AuthGuard] },
+    // { path: 'clients/:id/edit', component: ClientEditComponent, canActivate: [AuthGuard] },
     
     // Cualquier ruta no definida redirige a la lista de clientes
     { path: '**', redirectTo: '/clients'}
