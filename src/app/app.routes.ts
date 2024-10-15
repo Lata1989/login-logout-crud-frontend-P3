@@ -20,5 +20,5 @@ export const routes: Routes = [
     { path: 'clients/:id/edit', component: ClientEditComponent, canActivate: [AuthGuard] },
     
     // Cualquier ruta no definida redirige a la lista de clientes
-    { path: '**', redirectTo: '/clients', canActivate: [AuthGuard] }
+    { path: '**', redirectTo: '/clients'}
 ];
